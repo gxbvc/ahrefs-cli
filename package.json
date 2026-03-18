@@ -1,0 +1,21 @@
+{
+  "name": "ahrefs-cli",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "ahrefs-cli": "./bin/ahrefs-cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
