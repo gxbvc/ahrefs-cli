@@ -21,11 +21,11 @@
    ```bash
    cd ~/tools/ahrefs-cli
    git init && git add -A && git commit -m "Initial commit: ahrefs-cli"
-   gh repo create christiangenco/ahrefs-cli --public --source=. --push
+   gh repo create gxbvc/ahrefs-cli --public --source=. --push
    ```
 4. Add to ~/tools/sync.sh REPOS array:
    ```bash
-   "ahrefs-cli|https://github.com/christiangenco/ahrefs-cli.git|main"
+   "ahrefs-cli|https://github.com/gxbvc/ahrefs-cli.git|main"
    ```
 5. Add to ~/tools/AGENTS.md tool index table (keep alphabetical)
 6. Add to ~/tools/agent-toolkit/README.md in the appropriate section
