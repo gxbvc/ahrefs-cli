@@ -141,6 +141,31 @@ program
     output(data);
   });
 
+program
+  .command("pages-by-backlinks")
+  .description("Unique pages on a target ranked by inbound links (Ahrefs Best by links)")
+  .argument("<target>", "Domain or URL")
+  .option("--select <fields>", "Comma-separated fields to return", "url_to,links_to_target,refdomains_target,title_target")
+  .option("--limit <n>", "Number of results", "100")
+  .option("--mode <mode>", "Scope: exact, prefix, domain, subdomains", "subdomains")
+  .option("--order-by <field>", "Order by field:direction", "links_to_target:desc")
+  .option("--where <filter>", "Filter expression (JSON)")
+  .option("--history <history>", "Time frame: live, since:YYYY-MM-DD, all_time", "live")
+  .option("--protocol <protocol>", "Protocol: both, http, https", "both")
+  .action(async (target, opts) => {
+    const data = await apiGet("/site-explorer/pages-by-backlinks", {
+      target,
+      select: opts.select,
+      limit: opts.limit,
+      mode: opts.mode,
+      order_by: opts.orderBy,
+      where: opts.where,
+      history: opts.history,
+      protocol: opts.protocol,
+    });
+    output(data);
+  });
+
 // ── Site Explorer: Organic Search ──
 
 program

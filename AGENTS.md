@@ -12,6 +12,7 @@ ahrefs-cli metrics <target>                        # Organic traffic metrics
 
 # Site Explorer: Backlinks
 ahrefs-cli backlinks <target>                      # List backlinks
+ahrefs-cli pages-by-backlinks <target>             # Unique pages on target (Best by links)
 ahrefs-cli referring-domains <target>              # List referring domains
 ahrefs-cli anchors <target>                        # Anchor text distribution
 
